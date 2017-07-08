@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>Latin</groupId>
   <artifactId>Latin</artifactId>
@@ -12,6 +13,19 @@
 	    <!-- github server corresponds to entry in ~/.m2/settings.xml -->
 	    <github.global.server>github</github.global.server>
 	</properties>
+  
+    
+  	<repositories>
+	    <repository>
+	        <id>Latin-mvn-repo</id>
+	        <url>https://github.com/djoricpetar/mvn-repo.git</url>
+	        <snapshots>
+	            <enabled>true</enabled>
+	            <updatePolicy>always</updatePolicy>
+	        </snapshots>
+	    </repository>
+	</repositories>
+  
   
   <dependencies>
   
@@ -34,16 +48,12 @@
 	    <artifactId>lombok</artifactId>
 	    <version>${lombok.version}</version>
 	</dependency>
- 
- 
+	
  	<dependency>
- 		<groupId>org.logic_with_oop</groupId>
- 		<artifactId>LWO</artifactId>
- 		<version>1.0</version>
- 		<scope>system</scope>
- 		<systemPath>${project.basedir}/lib/LWO.jar</systemPath>
- 	</dependency>
-
+	    <groupId>logicwithoop1</groupId>
+	    <artifactId>logicwithoop1</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	</dependency>
   
 	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependency>
@@ -137,5 +147,6 @@
 			
 		</plugins>
 	</build>
+  
   
 </project>
