@@ -1,1 +1,1 @@
-# mvn-repo
+Maven repo for local projects 
